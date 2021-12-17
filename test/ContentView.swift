@@ -13,6 +13,7 @@ struct WebData: Identifiable{
     let url:String
 }
 //あいうえお
+//かきくけこ
 
 // Webデータのリストを作る
 let webList = [
