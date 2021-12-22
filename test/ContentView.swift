@@ -30,13 +30,23 @@ let webList = [
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            NavigationLink(destination: Subview()) {
-                Text("Go subview")
+            VStack {
+                NavigationLink(destination: Subview()) {
+                    Text("Go subview")
+                }
+                NavigationLink(destination: SecondView(urlString: "https://test-c1632.web.app/")) {
+                    Text("Go webview")
+                }
             }
+            .toolbar {
+                Button("Sign in") {}
+            }
+            .navigationTitle(Text("Top View"))
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("Top View")
     }
 }
+
 struct Subview: View{
     var body: some View {
         NavigationView {
@@ -50,6 +60,14 @@ struct Subview: View{
     }
 }
 
+struct SecondView: View {
+    let urlString: String
+    
+    var body: some View {
+        MyWebView(urlString: urlString)
+            .navigationBarTitle(Text(urlString), displayMode: .inline)
+    }
+}
 
 
 struct ContentView_Previews: PreviewProvider {
