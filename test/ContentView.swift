@@ -5,6 +5,7 @@
 //  Created by at-sakai on 2021/12/15.
 //
 import SwiftUI
+import Firebase
 
 // Webデータの構造体
 struct WebData: Identifiable{
@@ -75,3 +76,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
