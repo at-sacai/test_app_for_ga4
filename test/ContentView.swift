@@ -13,8 +13,6 @@ struct WebData: Identifiable{
     let name:String
     let url:String
 }
-//あいうえお
-//かきくけこ
 
 // Webデータのリストを作る
 let webList = [
@@ -40,7 +38,21 @@ struct ContentView: View {
                 }
             }
             .toolbar {
-                Button("Sign in") {}
+//                Button("Sign in") {}
+                Button(action: {
+
+                                let name = "hoge"
+                                let text = "This is hogehoge"
+
+                                Analytics.logEvent(AnalyticsEventScreenView, parameters: [
+                                    "name" : name as NSObject,
+                                    "full_text" : text as NSObject
+                                ])
+
+                            }, label: {
+                                Text("Button")
+                            })
+
             }
             .navigationTitle(Text("Top View"))
             .navigationBarTitleDisplayMode(.inline)

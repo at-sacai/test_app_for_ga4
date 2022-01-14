@@ -4,7 +4,6 @@
 //
 //  Created by at-sakai on 2021/12/15.
 //
-import UIKit
 import SwiftUI
 import Firebase
 
@@ -14,5 +13,9 @@ struct testApp: App {
         WindowGroup {
             ContentView()
         }
+    }
+    init(){
+        // Init Firebase
+        FirebaseApp.configure()
     }
 }
