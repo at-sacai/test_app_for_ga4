@@ -1,5 +1,5 @@
 //
-//  MyWebview.swift
+//  MyWebView.swift
 //  test
 //
 //  Created by at-sakai on 2021/12/22.
