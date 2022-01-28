@@ -21,6 +21,7 @@ struct MyWebView: UIViewRepresentable {
         }
         uiView.load(URLRequest(url: url))
     }
+    
 }
 
 struct MyWebView_Previews: PreviewProvider {

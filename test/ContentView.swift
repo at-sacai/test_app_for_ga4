@@ -7,85 +7,42 @@
 import SwiftUI
 import Firebase
 
-// Webデータの構造体
-struct WebData: Identifiable{
-    let id = UUID()
-    let name:String
-    let url:String
-}
-
-// Webデータのリストを作る
-let webList = [
-    WebData(name: "アップル",
-            url: "https://www.apple.com/jp/"),
-    WebData(name: "東京国立博物館",
-            url: "https://www.tnm.jp"),
-    WebData(name: "東京都現代美術館",
-            url: "https://www.mot-art-museum.jp"),
-    WebData(name: "川崎水族館",
-            url: "https://kawa-sui.com")
-]
-
 struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: Subview()) {
-                    Text("Go subview")
+                NavigationLink(destination: SubView()) {
+                    Text("Go SubView")
                 }
-                NavigationLink(destination: SecondView(urlString: "https://test-c1632.web.app/")) {
-                    Text("Go webview")
+                NavigationLink(destination: MySecondWebView(urlString: "https://test-c1632.web.app/")) {
+                    Text("Go WebView")
                 }
             }
             .toolbar {
-//                Button("Sign in") {}
                 Button(action: {
-
-                                let name = "hoge"
-                                let text = "This is hogehoge"
-
-                                Analytics.logEvent(AnalyticsEventScreenView, parameters: [
-                                    "name" : name as NSObject,
-                                    "full_text" : text as NSObject
-                                ])
-
-                            }, label: {
-                                Text("Button")
-                            })
-
+                    let name = "hoge"
+                    let text = "This is hogehoge"
+                    Analytics.logEvent(AnalyticsEventScreenView, parameters: [
+                        "name" : name as NSObject,
+                        "full_text" : text as NSObject
+                    ])
+                }, label: {
+                    Text("Button")
+                })
             }
-            .navigationTitle(Text("Top View"))
+            .navigationTitle(Text("Main"))
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear() {
+                Analytics.logEvent(AnalyticsEventScreenView,
+                                   parameters: [AnalyticsParameterScreenName: "\(ContentView.self)",
+                                               AnalyticsParameterScreenClass: "\(ContentView.self)"])
+            }
         }
     }
-}
-
-struct Subview: View{
-    var body: some View {
-        NavigationView {
-            List(webList){ item in
-                HStack {
-                    // Webリンク
-                    Link(item.name, destination: URL(string: item.url)!)
-                }
-            }.navigationTitle("Webリスト")
-        }
-    }
-}
-
-struct SecondView: View {
-    let urlString: String
     
-    var body: some View {
-        MyWebView(urlString: urlString)
-            .navigationBarTitle(Text(urlString), displayMode: .inline)
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-

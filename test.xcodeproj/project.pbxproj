@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4307E74027725BEC00B88C45 /* MyWebview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307E73F27725BEC00B88C45 /* MyWebview.swift */; };
 		430A8D4B278ED939002E0C02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 430A8D4A278ED939002E0C02 /* GoogleService-Info.plist */; };
+		435855E027A37B30007A2BF4 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435855DF27A37B30007A2BF4 /* SubView.swift */; };
+		435855E227A37B72007A2BF4 /* MySecondWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435855E127A37B72007A2BF4 /* MySecondWebView.swift */; };
 		43AF98EE2769799F00E0B3C0 /* testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF98ED2769799F00E0B3C0 /* testApp.swift */; };
 		43AF98F02769799F00E0B3C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF98EF2769799F00E0B3C0 /* ContentView.swift */; };
 		43AF98F2276979A000E0B3C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AF98F1276979A000E0B3C0 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		068A0CFDE46C0B0993D49539 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		4307E73F27725BEC00B88C45 /* MyWebview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebview.swift; sourceTree = "<group>"; };
 		430A8D4A278ED939002E0C02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		435855DF27A37B30007A2BF4 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		435855E127A37B72007A2BF4 /* MySecondWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySecondWebView.swift; sourceTree = "<group>"; };
 		43AF98EA2769799F00E0B3C0 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AF98ED2769799F00E0B3C0 /* testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testApp.swift; sourceTree = "<group>"; };
 		43AF98EF2769799F00E0B3C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,7 +68,9 @@
 			children = (
 				43AF98ED2769799F00E0B3C0 /* testApp.swift */,
 				43AF98EF2769799F00E0B3C0 /* ContentView.swift */,
+				435855DF27A37B30007A2BF4 /* SubView.swift */,
 				4307E73F27725BEC00B88C45 /* MyWebview.swift */,
+				435855E127A37B72007A2BF4 /* MySecondWebView.swift */,
 				430A8D4A278ED939002E0C02 /* GoogleService-Info.plist */,
 				43AF98F1276979A000E0B3C0 /* Assets.xcassets */,
 				43AF98F3276979A000E0B3C0 /* Preview Content */,
@@ -213,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43AF98F02769799F00E0B3C0 /* ContentView.swift in Sources */,
+				435855E227A37B72007A2BF4 /* MySecondWebView.swift in Sources */,
+				435855E027A37B30007A2BF4 /* SubView.swift in Sources */,
 				4307E74027725BEC00B88C45 /* MyWebview.swift in Sources */,
 				43AF98EE2769799F00E0B3C0 /* testApp.swift in Sources */,
 			);
